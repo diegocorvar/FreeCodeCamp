@@ -1,15 +1,98 @@
+h1 {
+    text-align: center;
+}
+
+hr {
+    margin: 0 auto 1.5rem;
+    width: 60%;
+}
+
 .pricing-container {
+    max-width: 800px;
+    margin: 0 auto;
+    
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
+
+    border: 2px solid black;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.pricing-container .pricing-card:nth-child(even) {
+    background-color: #f0f8ff;
 }
 
 .pricing-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex: 0 0 200px;
     border: 2px solid black;
+    background-color: #f7f7f7;
+
+    transition: transform 0.3s;
+}
+
+.pricing-card:hover {
+    transform: scale(1.1);
+}
+
+.pricing-card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.4em;
+}
+
+.pricing-card p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: rgb(56, 56, 56);
+    margin: 0 auto;
+}
+
+.pricing-card ul {
+    margin: 0;
+    padding: 0 2em;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+}
+
+.pricing-card li {
+    margin-bottom: 0.5em;
+    font-size: 0.8rem;
+    box-sizing: border-box;
+}
+
+.pricing-card li.included::before {
+    content: '✓';
+    color: green;
+    display: inline-block;
+    transform: translateX(-10px);
+}
+
+.pricing-card li:not(.included)::before {
+    content: '✗';
+    color: red;
+    display: inline-block;
+    transform: translateX(-10px);
+}
+
+.pricing-card button {
+    font-family:'Times New Roman', Times, serif;
+    display: block;
+    margin: 2em auto;
+    border: none;
+    background-color: #f1be32;
+    font-weight: bold;
+    width: 80%;
+    padding: 0.5em 0;
+    cursor: pointer;
 }
 
 /* ===== ORDER OF PLANS ===== */
