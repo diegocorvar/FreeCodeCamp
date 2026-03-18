@@ -1,3 +1,7 @@
+body {
+    background-color: green;
+}
+
 #playing-cards {
     margin: 0 auto;
     max-width: 700px;
@@ -9,6 +13,7 @@
 }
 
 .card {
+    background-color: white;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -16,32 +21,59 @@
     width: 200px;
     border-radius: 5px;
     box-shadow: 2px 2px 5px black;
+    font-weight: bold;
 }
 
 .card div {
-    margin: 0 10px;
+    margin: 2px 10px;
+}
+
+.lft-top-corner {
+    display: block;
+}
+
+.rgt-bttm-corner {
+    transform: rotate(180deg);
+}
+
+.left, .middle, .right {
+    display: flex;
+}
+
+.left, .right {
+    font-size: 1.5rem;
 }
 
 .left {
-    flex-grow: 1;
+    flex-direction: column;
     height: 10%;
-    font-size: 1rem;
 }
 
 .middle {
-    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 5rem;
+    gap: 0px;
+    font-size: 4rem;
     height: 80%;
-    flex-grow: 3;
+}
+
+.middle span {
+    display: block;
+}
+
+.middle span:last-child {
+    transform: rotate(180deg);
 }
 
 .right {
-    font-size: 1rem;
     height: 10%;
-    display: flex;
     flex-direction: column-reverse;
     justify-content: flex-start;
     align-items: flex-end;
+}
+
+.red-card {
+    color: red;
 }
